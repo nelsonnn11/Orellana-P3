@@ -17,26 +17,19 @@
 	<!-- Vue.js CDN -->
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-
-
-
 </head>
 
-  <body>
+<body>
 	<div id="vue_app" class="container">
 
 	    <div class="header">
-
 	      <div class="container">
 	        <h1 id="app_title">{{title}}</h1>
 	      </div>
-
 	    </div>
 
 		<div class="main">
-
 			<div class="row">
-				
 			  <div class="col-md-6" v-for="(movie, index) in movies" :key="index">
 				<div class="thumbnail">
 				  <img class="poster img-fluid" :src="movie.posters[0]" alt="Movie Poster" />
@@ -45,7 +38,7 @@
 				  <p class="title">{{ movie.title }} ({{ movie.country }})</p>
 				  <p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movie.iscore }} </p>
 				  <p class="runtime">Runtime: {{ movie.runtime }}</p>
-				  <p class="released">Released: {{ movie.released[0] }} | Rated: {{ movie.rating }}</p>
+				  <p class="released">Released: {{ getMonthText(movie.released) }} | Rated: {{ movie.rating }}</p>
 				  <p class="websites">Websites: <a :href="movie.imdb"> imdb </a> | <a :href="movie.website">website</a></p>
 	  
 				  <div class="social">
@@ -66,9 +59,8 @@
    		</div>
 	</div>
 
-  	<!-- This load the Vue.js code -->
+  	<!-- This loads the Vue.js code -->
 	<script type="text/javascript" src="site.js"></script>
-
 
 </body>
 </html>
