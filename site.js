@@ -52,6 +52,14 @@ const vue_app = Vue.createApp({
     
           return `${month} ${day}, ${year}`;
         },
+        like(index) {
+          // Implement logic to increment likes for the movie at the given index
+          this.movies[index].likes++;
+      },
+      dislike(index) {
+          // Implement logic to increment dislikes for the movie at the given index
+          this.movies[index].dislikes++;
+      },
         // Other methods
       },
     });
