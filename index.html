@@ -21,43 +21,43 @@
 
 <body>
 	<div id="vue_app" class="container">
-
-	    <div class="header">
-	      <div class="container">
-	        <h1 id="app_title">{{title}}</h1>
-	      </div>
-	    </div>
-
+		<div class="header">
+			<div class="container">
+				<h1 id="app_title">{{title}}</h1>
+			</div>
+		</div>
+	
 		<div class="main">
 			<div class="row">
-			  <div class="col-md-6" v-for="(movie, index) in movies" :key="index">
-				<div class="thumbnail">
-				  <img class="poster img-fluid" :src="movie.posters[0]" alt="Movie Poster" />
-				  <div class="imageInfo">{{ index + 1 }}</div>
-	  
-				  <p class="title">{{ movie.title }} ({{ movie.country }})</p>
-				  <p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movie.iscore }} </p>
-				  <p class="runtime">Runtime: {{ movie.runtime }}</p>
-				  <p class="released">Released: {{ getMonthText(movie.released) }} | Rated: {{ movie.rating }}</p>
-				  <p class="websites">Websites: <a :href="movie.imdb"> imdb </a> | <a :href="movie.website">website</a></p>
-	  
-				  <div class="social">
-					<p class="likes" @click="like(index)"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{ movie.likes }}</p>
-					<p class="dislikes" @click="dislike(index)"><i class="bi bi-hand-thumbs-down"></i> {{ movie.dislikes }}</p>
-				  </div>
+				<div class="col-md-6" v-for="(movie, index) in movies" :key="index">
+					<div class="thumbnail">
+						<img class="poster img-fluid" :src="movie.posters[movie.posterindex]" alt="Movie Poster" @click="posterClick(index)" />
+						<div class="imageInfo">{{ index + 1 }}</div>
+	
+						<p class="title">{{ movie.title }} ({{ movie.country }})</p>
+						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movie.iscore }} </p>
+						<p class="runtime">Runtime: {{ movie.runtime }}</p>
+						<p class="released">Released: {{ getMonthText(movie.released) }} | Rated: {{ movie.rating }}</p>
+						<p class="websites">Websites: <a :href="movie.imdb"> imdb </a> | <a :href="movie.website">website</a></p>
+	
+						<div class="social">
+							<p class="likes" @click="like(index)"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{ movie.likes }}</p>
+							<p class="dislikes" @click="dislike(index)"><i class="bi bi-hand-thumbs-down"></i> {{ movie.dislikes }}</p>
+						</div>
+					</div>
 				</div>
-			  </div>
 			</div>
-		  </div>
-
-    		<div class="footer">
-        		<div class="container">
-            		<a id="github" class="btn btn-lg btn-warning" :href="github">
-                	<i class="bi bi-github me-2"></i>{{owner}}
-            	</a>
-        	</div>
-   		</div>
+		</div>
+	
+		<div class="footer">
+			<div class="container">
+				<a id="github" class="btn btn-lg btn-warning" :href="github">
+					<i class="bi bi-github me-2"></i>{{owner}}
+				</a>
+			</div>
+		</div>
 	</div>
+	
 
   	<!-- This loads the Vue.js code -->
 	<script type="text/javascript" src="site.js"></script>

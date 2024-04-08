@@ -32,7 +32,7 @@ const vue_app = Vue.createApp({
       },
       data() {
         return {
-          // This holds your movies.json data.
+          // This holds movies.json data.
           movies: [],
           title: "IMDB + Nelson's Top 8 Movies",
           owner: "Nelson",
@@ -40,6 +40,7 @@ const vue_app = Vue.createApp({
         };
       },
       methods: {
+        
         getMonthText(dateArray) {
           const months = [
             'January', 'February', 'March', 'April', 'May', 'June',
@@ -60,7 +61,13 @@ const vue_app = Vue.createApp({
           // Implement logic to increment dislikes for the movie at the given index
           this.movies[index].dislikes++;
       },
-        // Other methods
+      posterClick(index) {
+        const movie = this.movies[index];
+        const numPosters = movie.posters.length;
+  
+        // Increment posterindex for the movie at the given index
+        movie.posterindex = (movie.posterindex + 1) % numPosters;
+      }
       },
     });
     
