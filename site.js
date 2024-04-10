@@ -67,8 +67,14 @@ const vue_app = Vue.createApp({
   
         // Increment posterindex for the movie at the given index
         movie.posterindex = (movie.posterindex + 1) % numPosters;
-      }
       },
+      
+      timeText(minutes) {
+        const hours = Math.trunc(minutes / 60);
+        const remainingMinutes = minutes % 60;
+        return `${hours}h ${remainingMinutes}m`;
+      },
+      }
     });
     
     vue_app.mount("#vue_app");
