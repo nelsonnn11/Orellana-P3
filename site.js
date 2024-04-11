@@ -32,6 +32,8 @@ const vue_app = Vue.createApp({
       },
       data() {
         return {
+          posterIndex: 0, // Initialize posterIndex
+
           // This holds movies.json data.
           movies: [],
           title: "IMDB + Nelson's Top 8 Movies",
@@ -74,6 +76,7 @@ const vue_app = Vue.createApp({
         const remainingMinutes = minutes % 60;
         return `${hours}h ${remainingMinutes}m`;
       },
+      
       }
     });
     
