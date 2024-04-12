@@ -68,5 +68,48 @@
             "likes": 812,
             "dislikes": 101,
             "posterindex": 0
-      }
+      },
+
+{
+      "title": "Baby Driver",
+      "iscore": 8.0,
+      "rating": "R",
+      "runtime": 115,
+      "released": [2017, 6, 28],
+      "country": "USA",
+      "posters": ["img/bd.png", "img/bd2.png"],
+      "imdb": "http://www.imdb.com/title/tt0111161",
+      "website": "https://en.wikipedia.org/wiki/Baby_Driver",
+      "likes": 840,
+      "dislikes": 222,
+      "posterindex": 0
+},
+{
+      "title": "Interstellar",
+      "iscore": 8.7,
+      "rating": "PG-13",
+      "runtime": 169,
+      "released": [2014, 10, 26],
+      "country": "USA",
+      "posters": ["img/i.png", "img/i2.png"],
+      "imdb": "https://www.imdb.com/title/tt0816692/reviews",
+      "website": "https://en.wikipedia.org/wiki/Interstellar_(film)",
+      "likes": 900,
+      "dislikes": 102,
+      "posterindex": 0
+},
+{
+      "title": "Pulp Fiction",
+      "iscore": 8.9,
+      "rating": "R",
+      "runtime": 154,
+      "released": [1994, 10, 14],
+      "country": "USA",
+      "posters": ["img/pf.png", "img/pf2.png", "img/pf3.png"],
+      "imdb": "https://www.imdb.com/title/tt0110912/",
+      "website": "https://en.wikipedia.org/wiki/Pulp_Fiction",
+      "likes": 1500,
+      "dislikes": 72,
+      "posterindex": 0
+}
 ]
